@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    
+    <script src="jquery.js"></script>
+</head>
+   
+
+
+
+<body>
+    <nav>
+        <div class="logo">
+            <!-- <h3>ADV Healthcare</h3> -->
+            <img  src="./Img/logo6.png" alt="logo" id="logo1" srcset="" height="70px" >
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="appointment.html" class="active">Doctors</a></li>
+                <li><a href="health.html">Healthify</a></li>
+                <li><a href="log1in.html">Login</a></li>
+            </ul>
+        </div>
+    
+        
+
+            
+    </nav>
+    <section>
+        <center>10% discount on online booking</center>
+
+        <div class="our">Our best doctors</div>
+        <br>
+        <div class="our1">
+            <a style="color: rgb(177, 4, 4);" href="emer.html">Emergency</a>
+        </div>
+        <div class="doctor">
+            <div class="names">
+                <div class="doc1">
+                <img src="./Img/doc1.webp" alt="img1">
+                <h4 class="title1">DR. MINI DAS</h4>
+                <P>Paediatric (Ped) Surgery, Paediatric (Ped) Urology <br>
+                    <span>Experience: 40+ years</span> <br>
+                    
+                    <span>Gender: male</span> <br>
+                    
+                    
+                </P>
+
+                </div>  
+            </div>
+            <div class="names">
+                <div class="doc1">
+                <img src="./Img/doc2.avif" alt="img1">
+                <h4 class="title1">DR. MINI DAS</h4>
+                <P>Paediatric (Ped) Surgery, Paediatric (Ped) Urology <br>
+                    <span>Experience: 40+ years</span> <br>
+                    <span>Gender: male</span> <br>
+                </P>
+
+                </div>  
+            </div>
+            <div class="names">
+                <div class="doc1">
+                <img src="./Img/doc9.jpeg" alt="img1">
+                <h4 class="title1">DR. Sushmita Singh</h4>
+                <P>Paediatric (Ped) Surgery, Paediatric (Ped) Urology <br>
+                    <span>Experience: 40+ years</span> <br>
+                    <span>Gender: male</span> <br>
+                </P>
+
+                </div>  
+            </div>
+        </div>
+        <div class="doctor">
+            <div class="names">
+                <div class="doc1">
+                <img src="./Img/doc10.webp" alt="img1">
+                <h4 class="title1">DR. John Smith</h4>
+                <P>Paediatric (Ped) Surgery, Paediatric (Ped) Urology <br>
+                    <span>Experience: 40+ years</span> <br>
+                    <span>Gender: male</span> <br>
+                </P>
+
+                </div>  
+            </div>
+            <div class="names">
+                <div class="doc1">
+                <img src="./Img/doc6.jpeg" alt="img1">
+                <h4 class="title1">DR. Sushmita Singh</h4>
+                <P>Paediatric (Ped) Surgery, Paediatric (Ped) Urology <br>
+                    <span>Experience: 40+ years</span> <br>
+                    <span>Gender: male</span> <br>
+                </P>
+
+                </div>  
+            </div>
+            <div class="names">
+                <div class="doc1">
+                <img src="./Img/doc7.jpeg" alt="img1">
+                <h4 class="title1">DR. Rani Sharma</h4>
+                <P>Paediatric (Ped) Surgery, Paediatric (Ped) Urology <br>
+                    <span>Experience: 40+ years</span> <br>
+                    <span>Gender: male</span> <br>
+                </P>
+
+                </div>  
+            </div>
+        </div>
+        <div class="doctor">
+            <div class="names">
+                <div class="doc1">
+                <img src="./Img/doc8.jpeg" alt="img1">
+                <h4 class="title1">DR. Nupur Das</h4>
+                <P>Paediatric (Ped) Surgery, Paediatric (Ped) Urology <br>
+                    <span>Experience: 40+ years</span> <br>
+                    <span>Gender: male</span> <br>
+                </P>
+
+                </div>  
+            </div>
+            <div class="names">
+                <div class="doc1">
+                <img src="./Img/doc9.jpeg" alt="img1">
+                <h4 class="title1">DR. Vanshika Thakur</h4>
+                <P>Paediatric (Ped) Surgery, Paediatric (Ped) Urology <br>
+                    <span>Experience: 40+ years</span> <br>
+                    <span>Gender: male</span> <br>
+                </P>
+
+                </div>  
+            </div>
+            <div class="names">
+                <div class="doc1">
+                <img src="./Img/doc10.webp" alt="img1">
+                <h4 class="title1">DR. Priya Malik</h4>
+                <P>Paediatric (Ped) Surgery, Paediatric (Ped) Urology <br>
+                    <span>Experience: 40+ years</span> <br>
+                    <span>Gender: male</span> <br>
+                </P>
+
+                </div>  
+            </div>
+        </div>
+
+        <div action="http://127.0.0.1:3000/formprocess" method=post class="container">
+            
+            <div id="popup" class="popup">
+                <p>Thank you for booking your appointment!</p>
+              </div>
+              
+              
+              <div id="appointmentFormContainer">
+                <h2>Book Appointment</h2>
+                <form id="appointmentForm">
+                  <label for="patientName">Patient Name:</label>
+                  <input type="text" id="patientName" name="patientName" required><br><br>
+                  <label for="doctor">Choose a Doctor:</label>
+                  <select id="doctor" name="doctor" required>
+                    <option value="">Select Doctor</option>
+                    <option value="Dr. Mini Das">Dr. Mini Das</option>
+                    <option value="Dr. John Smith">Dr. John Smith</option>
+                    <option value="Dr. Sushmita Singh">Dr. Sushmita Singh</option>
+                    <option value="Dr. Rani Sharma">Dr. Rani Sharma</option>
+                    <option value="Dr. Nupur Das">Dr. Nupur Das</option>
+                    <option value="Dr. Vanshika Thakur">Dr. Vanshika Thakur</option>
+                    <!-- Add more options for other doctors -->
+                  </select><br><br>
+                  <label for="date">Date:</label>
+                  <input type="date" id="date" name="date" required><br><br>
+                  <button class="btn" type="submit">Book Appointment</button>
+                </form>
+              </div>
+              
+              <div id="confirmation"></div>
+              
+     
+
+          
+        
+    </section>
+
+<footer class="footer">
+        <div class="fcontainer">
+          <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

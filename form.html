@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <!-- <h3>ADV Healthcare</h3> -->
+            <img  src="./Img/logo6.png" alt="" class="logo1" height="70px" >
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="appointment.html" >Doctors</a></li>
+                <li><a href="health.html" class="active">Healthify</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div action="http://127.0.0.1:3000/formprocess" method=post class="container">
+            
+        <div id="popup" class="popup">
+            <p>Thank you for booking your appointment!</p>
+          </div>
+          
+          
+          <div id="appointmentFormContainer">
+            <h2>Book Appointment</h2>
+            <form id="appointmentForm">
+              <label for="patientName">Patient Name:</label>
+              <input type="text" id="patientName" name="patientName" required><br><br>
+              <label for="doctor">Choose a Doctor:</label>
+              <select id="doctor" name="doctor" required>
+                <option value="">Select Doctor</option>
+                <option value="Dr. Mini Das">Dr. Mini Das</option>
+                <option value="Dr. John Smith">Dr. John Smith</option>
+                <option value="Dr. Sushmita Singh">Dr. Sushmita Singh</option>
+                <option value="Dr. Rani Sharma">Dr. Rani Sharma</option>
+                <option value="Dr. Nupur Das">Dr. Nupur Das</option>
+                <option value="Dr. Vanshika Thakur">Dr. Vanshika Thakur</option>
+                <!-- Add more options for other doctors -->
+              </select><br><br>
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" required><br><br>
+              <button class="btn" type="submit">Book Appointment</button>
+            </form>
+          </div>
+          
+          <div id="confirmation"></div>
+
+          <script src="script.js"></script>
+</body>
+</html>

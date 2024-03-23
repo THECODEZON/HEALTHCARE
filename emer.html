@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Ambulance Call</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+    }
+    #emergencyForm {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"], input[type="number"], button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    #map {
+        height: 300px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div id="emergencyForm">
+    <h2>Emergency Ambulance Call</h2>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="number" id="phone" placeholder="Phone Number">
+    <div id="map">
+        <img src="/Img/map1.png" alt="">
+    </div>
+    <button onclick="makeEmergencyCall()">Call Ambulance</button>
+</div>
+
+<script>
+function initMap(latitude, longitude) {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: latitude, lng: longitude},
+        zoom: 15
+    });
+    var marker = new google.maps.Marker({
+        position: {lat: latitude, lng: longitude},
+        map: map,
+        title: 'Your Location'
+    });
+}
+
+function makeEmergencyCall() {
+    // Retrieve user's location
+    navigator.geolocation.getCurrentPosition(function(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+
+        // Initialize map with user's location
+        initMap(latitude, longitude);
+
+        // Make an emergency call (In this example, we're just logging the details)
+        console.log("Emergency call initiated!");
+        console.log("Name: " + name);
+        console.log("Phone: " + phone);
+        console.log("Location: " + latitude + ", " + longitude);
+
+        // You can further process this information like making an actual call or sending an SMS to emergency services.
+    }, function(error) {
+        console.error("Error getting user's location: ", error);
+        alert("Unable to retrieve your location. Please enable location services and try again.");
+    });
+}
+</script>
+
+<!-- Load the Google Maps JavaScript API -->
+
+</body>
+</html>

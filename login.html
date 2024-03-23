@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In / Sign Up</title>
+  <link rel="stylesheet" href="LOG.CSS">
+</head>
+<body>
+  
+    <div class="container">
+        <div class="tabs">
+            <button class="tab" id="loginTab" onclick="showTab('login')">Sign In</button>
+            <button class="tab" id="signupTab" onclick="showTab('signup')">Sign Up</button>
+        </div>
+        
+        <div id="loginForm" class="form-container">
+            <h2>Sign In</h2>
+            <form id="signInForm" class="form">
+                <input type="text" id="signInUsername" placeholder="Username">
+                <input type="text" id="signInUsername" placeholder="Email">
+                <input type="password" id="signInPassword" placeholder="Password">
+                <button type="button" onclick="signIn()">Sign In</button>
+            </form>
+            <style>
+                body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(90deg,rgb(189, 31, 31),rgb(255, 251, 251),rgb(0, 0, 0)); */
+    /* background-image: url('./Img/backg.jpg'); */
+  }
+  
+  .container {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .tab.active {
+    background-color: #ccc;
+  }
+  
+  .form-container {
+    text-align: center;
+  }
+  
+  .form {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  input,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: #0c8eff;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgb(74, 234, 0);
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+  }
+            </style>
+        </div>
+        
+        <div id="signupForm" class="form-container" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signUpForm" class="form">
+                <input type="text" id="signUpUsername" placeholder="Username">
+                <input type="password" id="signUpPassword" placeholder="Password">
+                <button type="button" onclick="signUp()" >Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
